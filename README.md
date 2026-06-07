@@ -1,6 +1,6 @@
 # SupplyMind AI - Supply Chain Intelligence Platform
 
-A production-ready AI-powered supply chain optimization platform built with Next.js 16, React 19, and TypeScript.
+AI-powered supply chain optimization platform built with Next.js 16, React 19, and TypeScript.
 
 ## Features
 
