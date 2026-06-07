@@ -41,7 +41,7 @@ export async function seedDatabase(userId: string) {
   })
 
   // Create suppliers
-  const suppliers = await Promise.all(
+  const suppliersResult = await Promise.all(
     Array.from({ length: 8 }).map((_, i) =>
       db
         .insert(supplier)
@@ -63,9 +63,10 @@ export async function seedDatabase(userId: string) {
         .returning()
     )
   )
+  const suppliers = suppliersResult.map(s => s[0])
 
   // Create inventory items
-  const items = await Promise.all(
+  const itemsResult = await Promise.all(
     Array.from({ length: 20 }).map((_, i) =>
       db
         .insert(inventoryItem)
@@ -89,6 +90,7 @@ export async function seedDatabase(userId: string) {
         .returning()
     )
   )
+  const items = itemsResult.map(i => i[0])
 
   // Create stock history records
   await Promise.all(

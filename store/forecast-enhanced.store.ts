@@ -200,7 +200,10 @@ export const useForecastStore = create<ForecastState>()(
             role: 'user',
             content: question,
             timestamp: new Date().toISOString(),
-            context: state.conversation.context,
+            context: {
+              forecastId: state.conversation.context.currentForecast?.id,
+              category: state.conversation.context.selectedCategory,
+            },
           }
           set((s) => ({
             conversation: {
