@@ -27,6 +27,8 @@ export default function SettingsPage() {
     setTimeout(() => setSaved(false), 3000)
   }
 
+  const STRIPE_KEY = process.env.STRIPE_SECRET_KEY;
+
   return (
     <div className="p-8">
       <div className="max-w-2xl">
@@ -157,7 +159,7 @@ export default function SettingsPage() {
             <p className="text-sm text-muted-foreground mb-2">API Key</p>
             <div className="flex items-center gap-2">
               <code className="text-xs font-mono text-foreground bg-background px-2 py-1 rounded flex-1 overflow-hidden text-ellipsis">
-                sk_live_51234567890abcdefghijklmnop
+                {STRIPE_KEY}
               </code>
               <button className="px-3 py-1 text-sm border border-border rounded hover:bg-secondary transition-colors">
                 Copy
