@@ -157,7 +157,7 @@ export default function SettingsPage() {
             <p className="text-sm text-muted-foreground mb-2">API Key</p>
             <div className="flex items-center gap-2">
               <code className="text-xs font-mono text-foreground bg-background px-2 py-1 rounded flex-1 overflow-hidden text-ellipsis">
-                sk_live_51234567890abcdefghijklmnop
+                YOUR_STRIPE_API_KEY
               </code>
               <button className="px-3 py-1 text-sm border border-border rounded hover:bg-secondary transition-colors">
                 Copy
